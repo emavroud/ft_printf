@@ -11,25 +11,50 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "libft.h"
 #include <stdarg.h>
 
-static int ft_putchar(int c)
+int	ft_formats(va_list args, const char format)
 {
-	write(1, &c, 1);
+	int	length;
+
+	length = 0;
+	if (format == 'c')
+		length += ft_putchar_fd(va_arg(args, int), 1);
+	else if (format == 's')
+		length += ft_putnbr_fd(va_arg(args, char *), 1);
+	else if (format == 'p')
+		length +=
+	else if (format == 'd' || format == 'i')
+		length +=
+	else if (format == 'u')
+		length +=
+	else if (format == 'x' || format == 'X')
+		length += ft_print_hex(va_arg(args, unsigned int), format);
+	else if (format == '%')
+		length +=
 }
 
-int ft_printf(const char *fmt, ...)
+int ft_printf(const char *str, ...)
 {
 	int		i;
-	int		fd;
-	char	c;
+	va_list args;
+	int		length;
 
-	while (c = fmt)
+	i = 0;
+	length = 0;
+	va_start(args, str);
+	while (str[i])
 	{
-		if (c != '%')
+		if (str[i] == '%')
 		{
-			ft_putchar_fd(c, fd);
+			length += ft_formats(args, str[i + 1]);
+			i++;
 		}
-		c++;
+		else
+			length += ft_putchar_fd(str[i], 1);
+		i++;
 	}
+	va_end(args);
+	return (length);
 }
