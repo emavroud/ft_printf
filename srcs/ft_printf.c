@@ -20,19 +20,20 @@ int	ft_formats(va_list args, const char format)
 
 	length = 0;
 	if (format == 'c')
-		length += ft_putchar_fd(va_arg(args, int), 1);
+		length += ft_putchar(va_arg(args, int));
 	else if (format == 's')
-		length += ft_putnbr_fd(va_arg(args, char *), 1);
+		length += ft_putstr(va_arg(args, char *));
 	else if (format == 'p')
-		length +=
+		length += ft_print_ptr(va_arg(args, unsigned long));
 	else if (format == 'd' || format == 'i')
-		length +=
+		length += ft_printnbr(va_arg(args, int))
 	else if (format == 'u')
 		length +=
 	else if (format == 'x' || format == 'X')
 		length += ft_print_hex(va_arg(args, unsigned int), format);
 	else if (format == '%')
-		length +=
+		length += ft_printperc();
+	return(length);
 }
 
 int ft_printf(const char *str, ...)
@@ -52,7 +53,7 @@ int ft_printf(const char *str, ...)
 			i++;
 		}
 		else
-			length += ft_putchar_fd(str[i], 1);
+			length += ft_putchar(str[i]);
 		i++;
 	}
 	va_end(args);
