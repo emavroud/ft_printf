@@ -6,7 +6,7 @@
 /*   By: emavroud <emavroud@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 08:50:52 by emavroud          #+#    #+#             */
-/*   Updated: 2022/04/22 08:50:52 by emavroud         ###   ########.fr       */
+/*   Updated: 2022/05/12 10:12:42 by emavroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int	ft_formats(va_list args, const char format)
 	else if (format == 'p')
 		length += ft_print_ptr(va_arg(args, unsigned long));
 	else if (format == 'd' || format == 'i')
-		length += ft_printnbr(va_arg(args, int))
+		length += ft_printnbr(va_arg(args, int));
 	else if (format == 'u')
-		length +=
+		length += ft_print_unsigned(va_arg(args, unsigned int));
 	else if (format == 'x' || format == 'X')
 		length += ft_print_hex(va_arg(args, unsigned int), format);
 	else if (format == '%')
