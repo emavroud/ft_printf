@@ -6,12 +6,12 @@
 #    By: emavroud <emavroud@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/12 10:21:50 by emavroud          #+#    #+#              #
-#    Updated: 2022/05/12 11:00:54 by emavroud         ###   ########.fr        #
+#    Updated: 2022/05/12 11:32:11 by emavroud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
-DEPS = includes
+DEPS = ft_printf.h libft.h
 LIBFT = libft
 CC = cc
 FLAGS = -Wall -Wextra -Werror
@@ -21,7 +21,8 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 ${NAME}: ${OBJ}
-	ar rc $(NAME) $(OBJ)
+	ar rc $(NAME) $(OBJ) $< -o $@
+
 
 libft:
 	$(LIBFT) $(MAKE)

@@ -6,7 +6,7 @@
 /*   By: emavroud <emavroud@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 20:01:59 by emavroud          #+#    #+#             */
-/*   Updated: 2022/04/25 20:01:59 by emavroud         ###   ########.fr       */
+/*   Updated: 2022/05/12 11:16:00 by emavroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	ft_put_ptr(uintptr_t num)
 			ft_putchar_fd((num + '0'), 1);
 		}
 		else
-			ft_putchar((num - 10 + 'a'), 1);
+			ft_putchar_fd((num - 10 + 'a'), 1);
 	}
 }
 
