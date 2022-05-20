@@ -6,12 +6,12 @@
 /*   By: emavroud <emavroud@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 08:50:52 by emavroud          #+#    #+#             */
-/*   Updated: 2022/05/12 10:12:42 by emavroud         ###   ########.fr       */
+/*   Updated: 2022/05/20 14:16:21 by emavroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include "libft.h"
+#include "includes/ft_printf.h"
+#include "libft/libft.h"
 #include <stdarg.h>
 
 int	ft_formats(va_list args, const char format)

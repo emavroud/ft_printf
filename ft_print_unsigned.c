@@ -6,11 +6,11 @@
 /*   By: emavroud <emavroud@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 09:54:18 by emavroud          #+#    #+#             */
-/*   Updated: 2022/05/12 10:13:19 by emavroud         ###   ########.fr       */
+/*   Updated: 2022/05/20 13:25:05 by emavroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "includes/ft_printf.h"
 #include <stdlib.h>
 
 int	ft_get_num_len(unsigned int num)
@@ -30,7 +30,7 @@ char	*ft_uitoa(unsigned int n)
 	char	*num;
 	int		len;
 
-	len = ft_get_num_len;
+	len = ft_get_num_len(n);
 	num = (char *)malloc(sizeof(char) * (len + 1));
 	if (!num)
 		return(0);

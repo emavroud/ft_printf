@@ -6,12 +6,12 @@
 /*   By: emavroud <emavroud@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 19:58:40 by emavroud          #+#    #+#             */
-/*   Updated: 2022/04/25 19:58:40 by emavroud         ###   ########.fr       */
+/*   Updated: 2022/05/20 14:15:56 by emavroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include "libft.h"
+#include "includes/ft_printf.h"
+#include "libft/libft.h"
 
 int	ft_get_hex_len(unsigned int num)
 {

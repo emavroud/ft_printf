@@ -6,12 +6,12 @@
 /*   By: emavroud <emavroud@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 20:01:59 by emavroud          #+#    #+#             */
-/*   Updated: 2022/05/12 11:16:00 by emavroud         ###   ########.fr       */
+/*   Updated: 2022/05/20 14:16:12 by emavroud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include "libft.h"
+#include "includes/ft_printf.h"
+#include "libft/libft.h"
 #include <stdint.h>
 
 int	ft_get_ptr_len(uintptr_t num)
@@ -58,5 +58,5 @@ int	ft_print_ptr(unsigned long ptr)
 		ft_put_ptr(ptr);
 		length += ft_get_ptr_len(ptr);
 	}
-	return (ft_get_ptr_len);
+	return (length);
 }
